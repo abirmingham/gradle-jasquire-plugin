@@ -21,5 +21,4 @@ atlassian-ide-plugin.xml
 build
 .gradle
 out
-gradle.properties
 classes
