@@ -37,4 +37,5 @@ All files in jsSpecsDir will be collected and run automatically as part of the b
 
 ## Credit
 Matías Rodríguez
+
 Serials Solutions
