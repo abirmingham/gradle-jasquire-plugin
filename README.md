@@ -33,4 +33,4 @@ jasquire {
 ```
 
 ## Profit
-All files in jsSpecsDir will be collected and run automatically as part of the build's test task. Additionally, the 'jasquireMain' and 'jasquireTest' tasks may be run independently. Finally, the htmlRunner can be opened in a browser for debugging purposes, and changes to specs/source will be live.
+All files in jsSpecsDir will be collected and run automatically as part of the build's test task. Additionally, the 'jasquireMain' and 'jasquireTest' tasks may be run independently. Finally, the htmlRunner can be opened in a browser for debugging purposes, and changes to specs/source will be reflected automatically.
