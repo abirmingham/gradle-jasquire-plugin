@@ -10,8 +10,8 @@ class JasquirePlugin implements Plugin<Project> {
     public void apply(Project project) {
         project.extensions.create("jasquire", JasquireExtension)
 
-        JasquireResourcesTask resourcesTask = project.tasks.add("jasquireMain", JasquireResourcesTask.class);
-        JasquireRunnerTask    runnerTask    = project.tasks.add("jasquireTest", JasquireRunnerTask.class);
+        JasquireResourcesTask resourcesTask = project.tasks.create("jasquireMain", JasquireResourcesTask.class);
+        JasquireRunnerTask    runnerTask    = project.tasks.create("jasquireTest", JasquireRunnerTask.class);
 
         project.afterEvaluate { proj, state ->
             if (state.getFailure() == null) {
