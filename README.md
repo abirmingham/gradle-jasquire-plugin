@@ -4,7 +4,7 @@ Generates/executes a jasmine spec runner for an AMD-compliant project
 ```
 buildscript {
     dependencies {
-        classpath 'com.github.abirmingham:gradle-jasquire-plugin:1.0'
+        classpath 'com.github.abirmingham:gradle-jasquire-plugin:1.1'
     }
 }
 
