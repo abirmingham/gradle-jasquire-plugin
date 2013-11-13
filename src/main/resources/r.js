@@ -119,8 +119,7 @@ var requirejs, require, define;
             console.log('x.js exists not applicable in browser env');
             return false;
         };
-
-    } else
+    }
 
     /** vim: et:ts=4:sw=4:sts=4
  * @license RequireJS 2.1.4 Copyright (c) 2010-2012, The Dojo Foundation All Rights Reserved.
