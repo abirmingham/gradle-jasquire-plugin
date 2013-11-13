@@ -33,24 +33,7 @@ var requirejs, require, define;
         console.log('See https://github.com/jrburke/r.js for usage.');
     }
 
-    if ((typeof navigator !== 'undefined' && typeof document !== 'undefined') ||
-            (typeof importScripts !== 'undefined' && typeof self !== 'undefined')) {
-        env = 'browser';
-
-        readFile = function (path) {
-            return fs.readFileSync(path, 'utf8');
-        };
-
-        exec = function (string, name) {
-            return eval(string);
-        };
-
-        exists = function (fileName) {
-            console.log('x.js exists not applicable in browser env');
-            return false;
-        };
-
-    } else if (typeof Packages !== 'undefined') {
+    if (typeof Packages !== 'undefined') {
         env = 'rhino';
 
         fileName = args[0];
@@ -120,6 +103,22 @@ var requirejs, require, define;
             commandOption = fileName.substring(1);
             fileName = process.argv[3];
         }
+    } else if ((typeof navigator !== 'undefined' && typeof document !== 'undefined') ||
+            (typeof importScripts !== 'undefined' && typeof self !== 'undefined')) {
+        env = 'browser';
+
+        readFile = function (path) {
+            return fs.readFileSync(path, 'utf8');
+        };
+
+        exec = function (string, name) {
+            return eval(string);
+        };
+
+        exists = function (fileName) {
+            console.log('x.js exists not applicable in browser env');
+            return false;
+        };
     }
 
     /** vim: et:ts=4:sw=4:sts=4
