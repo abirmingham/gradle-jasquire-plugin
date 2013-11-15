@@ -15,7 +15,7 @@ class JasquireResourcesTask extends DefaultTask {
             "jasmine.console_reporter.js",
             "env.rhino.1.2.js",
             "envjs.bootstrap.js",
-            "r.js",
+            "jasquire-r.js",
             "js.jar"
     ];
 
@@ -55,7 +55,7 @@ class JasquireResourcesTask extends DefaultTask {
         String targetURL = "${targetDir}".replaceAll("\\\\", "/");
         StringBuffer content = new StringBuffer("");
         content.append("load(\"${targetURL}/lib/env.rhino.1.2.js\");\n");
-        content.append("load(\"${targetURL}/lib/r.js\");\n");
+        content.append("load(\"${targetURL}/lib/jasquire-r.js\");\n");
         content.append("load(\"${targetURL}/lib/envjs.bootstrap.js\");");
         output.write( content.toString() );
     }
